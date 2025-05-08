@@ -95,19 +95,32 @@
   </section>
 
   <section>
-    <h2>Contact</h2>
-    <p>Email: agbejajohn47@gmail.com</p>
     <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>WhatsApp Redirect</title>
+  <title>Contact Me</title>
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
     .oval-button {
       display: inline-block;
-      background-color: #25D366; /* WhatsApp Green */
-      color: white;
       padding: 15px 40px;
       text-align: center;
       text-decoration: none;
@@ -115,92 +128,64 @@
       border: none;
       border-radius: 50px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .oval-button:hover {
-      background-color: #1ebd5a;
-    }
-  </style>
-</head>
-<body>
-
-  <a href="https://wa.me/2348053724254" target="_blank" class="oval-button">
-    Chat on WhatsApp
-  </a>
-
-</body>
-</html>
-
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Instagram Redirect</title>
-  <style>
-    .oval-button {
-      display: inline-block;
-      background-color: #E1306C; /* Instagram Pink */
       color: white;
-      padding: 15px 40px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 18px;
-      border: none;
-      border-radius: 50px; /* Oval shape */
-      cursor: pointer;
       transition: background-color 0.3s ease;
     }
 
-    .oval-button:hover {
-      background-color: #C13584;
-    }
-  </style>
-</head>
-<body>
-
-  <a href="www.instagram.com/johnagbeja?igsh=NWFodGk3d203cGtw" target="_blank" class="oval-button">
-    Visit My Instagram
-  </a>
-
-</body>
-</html>
-
-   <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Facebook Redirect</title>
-  <style>
-    .oval-button {
-      display: inline-block;
-      background-color: #1877f2; /* Facebook Blue */
-      color: white;
-      padding: 15px 40px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 18px;
-      border: none;
-      border-radius: 50px; /* Oval shape */
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+    .facebook {
+      background-color: #1877f2;
     }
 
-    .oval-button:hover {
+    .facebook:hover {
       background-color: #145dbf;
     }
+
+    .instagram {
+      background-color: #E1306C;
+    }
+
+    .instagram:hover {
+      background-color: #C13584;
+    }
+
+    .whatsapp {
+      background-color: #128C7E; /* WhatsApp Official Green */
+    }
+
+    .whatsapp:hover {
+      background-color: #075E54;
+    }
+
+    .email {
+      background-color: #D44638; /* Email Red */
+    }
+
+    .email:hover {
+      background-color: #A5352D;
+    }
   </style>
 </head>
 <body>
 
-  <a href="https://web.facebook.com/profile.php?id=100081657203590" target="_blank" class="oval-button">
-    Visit My Facebook
-  </a>
+  <h2>Connect with Me</h2>
+  <div class="button-container">
+    <a href="https://web.facebook.com/profile.php?id=100081657203590" target="_blank" class="oval-button facebook">
+      Facebook
+    </a>
+    <a href="www.instagram.com/johnagbeja?igsh=NWFodGk3d203cGtw" target="_blank" class="oval-button instagram">
+      Instagram
+    </a>
+    <a href="https://wa.me/2348053724254" target="_blank" class="oval-button whatsapp">
+      WhatsApp
+    </a>
+    <a href="mailto:agbejajohn47@gmail.com" class="oval-button email">
+      Email
+    </a>
+  </div>
 
 </body>
 </html>
+
   </section>
 
   <footer>
