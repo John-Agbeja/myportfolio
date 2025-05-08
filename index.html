@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -12,12 +12,14 @@
       background: #f4f4f4;
       color: #333;
     }
+
     header {
       background: #2c3e50;
       color: white;
       padding: 2rem;
       text-align: center;
     }
+
     section {
       max-width: 800px;
       margin: 2rem auto;
@@ -26,31 +28,90 @@
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     }
+
     h1, h2 {
       color: #2c3e50;
     }
+
     .projects {
       display: grid;
       gap: 1rem;
     }
+
     .project {
       padding: 1rem;
       background: #f9f9f9;
       border-left: 4px solid #2c3e50;
     }
+
     footer {
       text-align: center;
       padding: 1rem;
       font-size: 0.9rem;
       color: #777;
     }
+
     .profile-img {
       text-align: center;
       margin-top: 1rem;
     }
+
     .profile-img img {
       width: 150px;
       border-radius: 50%;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 1rem;
+    }
+
+    .oval-button {
+      display: inline-block;
+      padding: 15px 40px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 18px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .facebook {
+      background-color: #1877f2;
+    }
+
+    .facebook:hover {
+      background-color: #145dbf;
+    }
+
+    .instagram {
+      background-color: #E1306C;
+    }
+
+    .instagram:hover {
+      background-color: #C13584;
+    }
+
+    .whatsapp {
+      background-color: #128C7E;
+    }
+
+    .whatsapp:hover {
+      background-color: #075E54;
+    }
+
+    .email {
+      background-color: #D44638;
+    }
+
+    .email:hover {
+      background-color: #A5352D;
     }
   </style>
 </head>
@@ -85,107 +146,20 @@
         <p>I designed the cover of this upcoming book focused on self-discovery through solitude.</p>
       </div>
       <div class="project">
-  <h3>Social Media Manager</h3>
-  <p>I am the social media manager of a religious institution, <strong>Full Redemption Chapel, Gbogbo</strong> of the <em>Jesus Is Lord Foundation International</em>.</p>
-</body>
-</html>
-
-
+        <h3>Social Media Manager</h3>
+        <p>I am the social media manager of a religious institution, <strong>Full Redemption Chapel, Gbogbo</strong> of the <em>Jesus Is Lord Foundation International</em>.</p>
+      </div>
     </div>
   </section>
-  
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Me</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #f4f4f4;
-    }
 
-    .button-container {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .oval-button {
-      display: inline-block;
-      padding: 15px 40px;
-      text-align: center;
-      text-decoration: none;
-      font-size: 18px;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      color: white;
-      transition: background-color 0.3s ease;
-    }
-
-    .facebook {
-      background-color: #1877f2;
-    }
-
-    .facebook:hover {
-      background-color: #145dbf;
-    }
-
-    .instagram {
-      background-color: #E1306C;
-    }
-
-    .instagram:hover {
-      background-color: #C13584;
-    }
-
-    .whatsapp {
-      background-color: #128C7E; /* WhatsApp Official Green */
-    }
-
-    .whatsapp:hover {
-      background-color: #075E54;
-    }
-
-    .email {
-      background-color: #D44638; /* Email Red */
-    }
-
-    .email:hover {
-      background-color: #A5352D;
-    }
-  </style>
-</head>
-<body>
-
-  <h2>Connect with Me</h2>
-  <div class="button-container">
-    <a href="https://web.facebook.com/profile.php?id=100081657203590" target="_blank" class="oval-button facebook">
-      Facebook
-    </a>
-     <a href="https://www.instagram.com/johnagbeja?igsh=NWFodGk3d203cGtwE" target="_blank" class="oval-button instagram">
-      Instagram
-    </a>
-
-    <a href="https://wa.me/2348053724254" target="_blank" class="oval-button whatsapp">
-      WhatsApp
-    </a>
-    <a href="mailto:agbejajohn47@gmail.com" class="oval-button email">
-      Email
-    </a>
-  </div>
-
-</body>
-</html>
-
+  <section>
+    <h2>Connect with Me</h2>
+    <div class="button-container">
+      <a href="https://web.facebook.com/profile.php?id=100081657203590" target="_blank" class="oval-button facebook">Facebook</a>
+      <a href="https://www.instagram.com/johnagbeja?igsh=NWFodGk3d203cGtwE" target="_blank" class="oval-button instagram">Instagram</a>
+      <a href="https://wa.me/2348053724254" target="_blank" class="oval-button whatsapp">WhatsApp</a>
+      <a href="mailto:agbejajohn47@gmail.com" class="oval-button email">Email</a>
+    </div>
   </section>
 
   <footer>
