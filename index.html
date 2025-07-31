@@ -1,70 +1,76 @@
 <!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JohnAgbeja Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script>
-    function filterProjects(category) {
-      const projects = document.querySelectorAll('.project');
-      projects.forEach(project => {
-        const isVisible = category === 'All' || project.classList.contains(category);
-        project.style.display = isVisible ? 'block' : 'none';
-      });
-    }
-  </script>
-</head><body class="bg-gray-100 text-gray-800">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head><body class="bg-gray-100 text-gray-900">
   <!-- Hero Section -->
   <section id="hero" class="bg-gray-900 text-white py-20 px-6 text-center">
     <p class="text-lg md:text-xl font-medium">MY NAME IS</p>
-    <h1 class="text-4xl md:text-6xl font-bold mt-2">JOHN AGBEJA</h1>
+    <h1 class="text-3xl md:text-5xl font-semibold mt-2">JOHN AGBEJA</h1>
     <div class="inline-block bg-yellow-400 text-gray-900 px-4 py-2 mt-4 rounded">
       <p class="text-base md:text-lg font-medium">I'M A DIGITAL CREATOR AND CONSULTANT</p>
     </div>
-  </section>  <!-- About Section -->  <section id="about" class="py-16 px-4 md:px-12 lg:px-32 bg-white">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-      <img src="profile33.jpg" alt="About Me" class="w-full shadow-lg">
-      <div>
-        <h2 class="text-3xl font-bold mb-4">About Me</h2>
-        <p class="text-lg leading-relaxed">I'm a content creator and digital entrepreneur who helps individuals and businesses grow using graphics, video, branding, and strategy.</p>
-      </div>
+  </section>  <!-- About Me Section -->  <section id="about" class="py-16 px-6 md:flex md:items-center md:justify-center bg-white">
+    <div class="md:w-1/3 mb-8 md:mb-0">
+      <img src="profile33.jpg" alt="John Agbeja" class="mx-auto w-64 h-auto" />
     </div>
-  </section>  <!-- Work/Projects Section -->  <section id="projects" class="py-16 px-4 md:px-12 lg:px-32 bg-gray-100">
-    <h2 class="text-3xl font-bold text-center mb-8">My Projects</h2>
+    <div class="md:w-2/3 md:pl-12">
+      <h2 class="text-3xl font-bold mb-4">About Me</h2>
+      <p class="text-lg leading-relaxed">I'm a content creator and digital entrepreneur who helps individuals and businesses grow using graphics, video, branding, and strategy. My passion is combining creativity and technology to tell impactful stories and drive measurable results.</p>
+    </div>
+  </section>  <!-- Project Section -->  <section id="projects" class="py-16 px-6 bg-gray-100">
+    <h2 class="text-3xl font-bold mb-6 text-center">My Work</h2>
     <div class="text-center mb-6">
-      <button onclick="filterProjects('All')" class="px-4 py-2 bg-gray-800 text-white rounded-full mx-1">All</button>
-      <button onclick="filterProjects('Graphics')" class="px-4 py-2 bg-gray-800 text-white rounded-full mx-1">Graphics</button>
-      <button onclick="filterProjects('Videos')" class="px-4 py-2 bg-gray-800 text-white rounded-full mx-1">Videos</button>
-      <button onclick="filterProjects('Certifications')" class="px-4 py-2 bg-gray-800 text-white rounded-full mx-1">Certifications</button>
+      <button class="mx-2 px-4 py-2 bg-gray-800 text-white rounded">All</button>
+      <button class="mx-2 px-4 py-2 bg-gray-800 text-white rounded">Graphics</button>
+      <button class="mx-2 px-4 py-2 bg-gray-800 text-white rounded">Videos</button>
+      <button class="mx-2 px-4 py-2 bg-gray-800 text-white rounded">Certifications</button>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="project Graphics"><img src="project1.jpg" alt="Project 1" class="w-full h-auto"></div>
-      <div class="project Videos"><img src="project2.jpg" alt="Project 2" class="w-full h-auto"></div>
-      <div class="project Graphics"><img src="project3.jpg" alt="Project 3" class="w-full h-auto"></div>
-      <div class="project Certifications"><img src="Web design.png" alt="Web Design Certificate" class="w-full h-auto"></div>
-      <div class="project Certifications"><img src="Video Editing.png" alt="Video Editing Certificate" class="w-full h-auto"></div>
-      <div class="project Certifications"><img src="Facebook Ads.png" alt="Facebook Ads Certificate" class="w-full h-auto"></div>
-      <div class="project Certifications"><img src="Social MediaManager.png" alt="Social Media Management Certificate" class="w-full h-auto"></div>
-      <div class="project Certifications"><img src="Canva Design.png" alt="Canva Design Certificate" class="w-full h-auto"></div>
-      <div class="project Certifications"><img src="alison_cert.png" alt="ALISON Certificate" class="w-full h-auto"></div>
+      <img src="project1.jpg" alt="Project 1" class="w-full h-auto rounded shadow">
+      <img src="project2.jpg" alt="Project 2" class="w-full h-auto rounded shadow">
+      <img src="project3.jpg" alt="Project 3" class="w-full h-auto rounded shadow">
+      <div class="w-full h-48 bg-gray-300 rounded shadow"></div>
+      <div class="w-full h-48 bg-gray-300 rounded shadow"></div>
+      <div class="w-full h-48 bg-gray-300 rounded shadow"></div>
+      <div class="w-full h-48 bg-gray-300 rounded shadow"></div>
+      <div class="w-full h-48 bg-gray-300 rounded shadow"></div>
+      <div class="w-full h-48 bg-gray-300 rounded shadow"></div>
     </div>
-  </section>  <!-- Contact Section -->  <section id="contact" class="py-16 px-4 md:px-12 lg:px-32 bg-white">
-    <h2 class="text-3xl font-bold text-center mb-8">Connect with Me</h2>
-    <div class="flex justify-center space-x-6">
-      <a href="https://web.facebook.com/profile.php?id=100081657203590" target="_blank">
-        <img src="facebook-icon.png" alt="Facebook" class="w-8 h-8">
-      </a>
-      <a href="https://www.instagram.com/johnagbeja" target="_blank">
-        <img src="instagram-icon.png" alt="Instagram" class="w-8 h-8">
-      </a>
-      <a href="https://wa.me/2348053724254" target="_blank">
-        <img src="whatsapp-icon.png" alt="WhatsApp" class="w-8 h-8">
-      </a>
-      <a href="mailto:agbejajohn47@gmail.com">
-        <img src="email-icon.png" alt="Email" class="w-8 h-8">
-      </a>
-      <a href="tel:+2348053724254">
-        <img src="phone-icon.png" alt="Call" class="w-8 h-8">
-      </a>
+  </section>  <!-- Certifications Section -->  <section id="certifications" class="py-16 px-6 bg-white">
+    <h2 class="text-3xl font-bold mb-6 text-center">Certificate of Skills</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Web Design</h3>
+        <img src="Web design.png" alt="Web Design Certificate" class="w-full max-w-md">
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Video Editing</h3>
+        <img src="Video Editing.png" alt="Video Editing Certificate" class="w-full max-w-md">
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Facebook Ads</h3>
+        <img src="Facebook Ads.png" alt="Facebook Ads Certificate" class="w-full max-w-md">
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Social Media Marketing</h3>
+        <img src="Social MediaManager.png" alt="Social Media Management Certificate" class="w-full max-w-md">
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Canva Design</h3>
+        <img src="Canva Design.png" alt="Canva Design Certificate" class="w-full max-w-md">
+      </div>
     </div>
-  </section>  <footer class="text-center py-4 bg-gray-200 text-sm">&copy; 2025 John Agbeja. All rights reserved.</footer>
+  </section>  <!-- Contact Section -->  <section id="contact" class="py-16 px-6 bg-gray-100">
+    <h2 class="text-3xl font-bold mb-6 text-center">Connect with Me</h2>
+    <div class="flex justify-center space-x-6 text-2xl">
+      <a href="https://web.facebook.com/profile.php?id=100081657203590" target="_blank" class="text-blue-600"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/johnagbeja" target="_blank" class="text-pink-500"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/2348053724254" target="_blank" class="text-green-500"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:agbejajohn47@gmail.com" class="text-red-500"><i class="fas fa-envelope"></i></a>
+      <a href="tel:+2348053724254" class="text-gray-700"><i class="fas fa-phone"></i></a>
+    </div>
+  </section>
 </body></html>
