@@ -2,144 +2,173 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>John Agbeja | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafb;
       color: #333;
+      line-height: 1.6;
     }
 
     header {
-      background: #2c3e50;
+      background: linear-gradient(135deg, #2c3e50, #34495e);
       color: white;
-      padding: 2rem;
+      padding: 3rem 1rem;
       text-align: center;
     }
 
-    section {
-      max-width: 800px;
-      margin: 2rem auto;
-      padding: 1rem;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    header img {
+      width: 120px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 4px solid white;
     }
 
-    h1 {
-      color: yellow;
+    header h1 {
+      font-size: 2rem;
+      margin: 0.5rem 0;
+      color: #ffdd00;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
     }
 
     h2 {
       color: #2c3e50;
+      margin-bottom: 1rem;
+      border-left: 5px solid #2c3e50;
+      padding-left: 1rem;
+      font-size: 1.5rem;
     }
 
     .projects {
       display: grid;
-      gap: 1rem;
+      gap: 1.5rem;
     }
 
     .project {
-      padding: 1rem;
-      background: #f9f9f9;
-      border-left: 4px solid #2c3e50;
+      background: #f0f4f8;
+      padding: 1.5rem;
+      border-radius: 10px;
+      transition: transform 0.2s ease;
     }
 
-    footer {
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      color: #777;
+    .project:hover {
+      transform: translateY(-3px);
+    }
+
+    .project img {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 1rem;
+      border-radius: 10px;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
     }
 
     .button-container {
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 1rem;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 1.5rem;
     }
 
     .oval-button {
-      display: inline-block;
-      padding: 15px 40px;
-      text-align: center;
+      padding: 12px 28px;
+      font-size: 16px;
+      border-radius: 999px;
+      color: #fff;
       text-decoration: none;
-      font-size: 18px;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      color: white;
       transition: background-color 0.3s ease;
     }
 
-    .facebook {
-      background-color: #1877f2;
+    .facebook { background: #1877f2; }
+    .facebook:hover { background: #145dbf; }
+
+    .instagram { background: #e1306c; }
+    .instagram:hover { background: #c13584; }
+
+    .whatsapp, .call { background: #25d366; }
+    .whatsapp:hover, .call:hover { background: #128c7e; }
+
+    .email { background: #d44638; }
+    .email:hover { background: #a5352d; }
+
+    a {
+      color: #1877f2;
+      text-decoration: none;
     }
 
-    .facebook:hover {
-      background-color: #145dbf;
+    a:hover {
+      text-decoration: underline;
     }
 
-    .instagram {
-      background-color: #E1306C;
+    footer {
+      text-align: center;
+      padding: 1.5rem 1rem;
+      color: #888;
+      font-size: 0.9rem;
     }
 
-    .instagram:hover {
-      background-color: #C13584;
-    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
 
-    .whatsapp {
-      background-color: #128C7E;
-    }
+      .oval-button {
+        width: 100%;
+        text-align: center;
+      }
 
-    .whatsapp:hover {
-      background-color: #075E54;
-    }
-
-    .email {
-      background-color: #D44638;
-    }
-
-    .email:hover {
-      background-color: #A5352D;
-    }
-
-        .call {
-      background-color: #128C7E;
-    }
-
-    .call:hover {
-      background-color: #075E54;
+      section {
+        padding: 1.5rem 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="profile32.jpg" alt="John Agbeja" style="width:150px;">
-    <p>Welcome to</p>
-    <h1>John Agbeja Portfolio.</h1>
+    <img src="profile32.jpg" alt="John Agbeja">
+    <h1>John Agbeja Portfolio</h1>
     <p>Content Creator | Digital Skills Coach | Entrepreneur</p>
   </header>
 
   <section>
     <h2>About Me</h2>
-    <p>Hello! I'm John Agbeja, a visionary leader committed to making a difference, a passionate content creator and digital entrepreneur. I help people grow through personal development content and offer services in branding, video editing, graphics designs, ads manager and more.</p>
+    <p>Hello! I'm John Agbeja, a visionary leader committed to making a difference. I’m a passionate content creator and digital entrepreneur who helps people grow through personal development content and offers services in branding, video editing, graphics design, ads management, and more.</p>
   </section>
 
   <section>
     <h2>Projects & Services</h2>
     <div class="projects">
-
       <div class="project">
         <h3>Beanova: Locust Bean Products</h3>
         <p>A growing food brand offering natural, healthy locust bean-based products.</p>
-        <img src="Beanova1.jpg" alt="Single Locust Bean" style="width:100%; max-width:600px;">
-        <img src="beanova-products.jpg" alt="Collection of Products" style="width:100%; max-width:600px; margin-top:10px;">
+        <img src="Beanova1.jpg" alt="Single Locust Bean">
+        <img src="beanova-products.jpg" alt="Collection of Products">
       </div>
 
       <div class="project">
@@ -150,82 +179,60 @@
       <div class="project">
         <h3>Alone but Not Lonely (Book Cover Design)</h3>
         <p>I designed the cover of this upcoming book focused on self-discovery through solitude.</p>
-        <img src="AloneCover1.jpg" alt="Alone but Not Lonely Cover" style="width:100%; max-width:600px;">
+        <img src="AloneCover1.jpg" alt="Alone but Not Lonely Cover">
       </div>
-    
 
       <div class="project">
         <h3>Ads Manager</h3>
-        <p>I create and manage ads for businesses, individuals and influencers.</p>
+        <p>I create and manage ads for businesses, individuals, and influencers.</p>
       </div>
 
       <div class="project">
         <h3>Social Media Manager</h3>
-        <p>I am the social media manager of a religious institution, <strong>Full Redemption Chapel, Gbogbo</strong> of the <em>Jesus Is Lord Foundation International</em>.</p
-                                                                                                                                                                              
-        <h3>Sample of Work: Full Redemption Chapel, Gbogbo</h3>
-        <p>I manage the social media handles of <strong>Full Redemption Chapel, Gbogbo</strong>, a branch of the <em>Jesus Is Lord Foundation International</em>. I help promote their events, messages, and digital outreach.</p>
-        <p>Here's the single branding I did for the religious institution. Logo, Flyers and Website.</p>
-        <img src="frc-flyer1.jpg" alt="FRC Flyer 1" style="width:100%; max-width:600px; margin-top:10px;">
-        <img src="frc-flyer2.jpg" alt="FRC Flyer 2" style="width:100%; max-width:600px; margin-top:10px;">
-        <p><a href="https://faith-arena.github.io/FRChapel-Gbogbo/" target="_blank">Visit the FRChapel, Gbogbo.</a></p>
-      </div> 
-  
+        <p>I manage <strong>Full Redemption Chapel, Gbogbo</strong>'s social media. This includes their events, branding and web presence.</p>
+        <img src="frc-flyer1.jpg" alt="FRC Flyer 1">
+        <img src="frc-flyer2.jpg" alt="FRC Flyer 2">
+        <p><a href="https://faith-arena.github.io/FRChapel-Gbogbo/" target="_blank">Visit the FRChapel Website</a></p>
+      </div>
 
       <div class="project">
         <h3>Basic Digital Solutions</h3>
-        <p>I help individuals and small businesses solve basic digital problems with practical, fast, and easy-to-understand solutions.</p>
+        <p>I help individuals and small businesses solve basic digital problems with fast, practical solutions.</p>
         <ul>
-          <li>Creating and managing social media accounts</li>
-          <li>Setting up professional email addresses</li>
-          <li>Linking domains to websites</li>
-          <li>Setting up professional websites (with or without custom domains)</li>
-          <li>Creating portfolio websites for freelancers and remote job seekers</li>
-          <li>Fixing common smartphone or computer issues</li>
-          <li>Guidance on installing and using essential digital tools (Zoom, Canva, Google Drive, etc.)</li>
+          <li>Creating & managing social media accounts</li>
+          <li>Setting up professional emails</li>
+          <li>Linking domains</li>
+          <li>Website setup</li>
+          <li>Portfolio website creation</li>
+          <li>Tech troubleshooting</li>
+          <li>Guidance on tools like Zoom, Canva, Google Drive, etc.</li>
         </ul>
       </div>
-
     </div>
   </section>
 
   <section>
     <h2>Certificate of Skills</h2>
     <div class="projects">
-      <div class="project">
-        <h3>Web Design</h3>
-        <img src="Web design.png" alt="Web Design Certificate" style="width:100%; max-width:600px;">
-      </div>
-      <div class="project">
-        <h3>Video Editing</h3>
-        <img src="Video Editing.png" alt="Video Editing Certificate" style="width:100%; max-width:600px;">
-      </div>
-      <div class="project">
-        <h3>Facebook Ads</h3>
-        <img src="Facebook Ads.png" alt="Facebook Ads Certificate" style="width:100%; max-width:600px;">
-      </div>
-      <div class="project">
-        <h3>Social Media Marketing</h3>
-        <img src="Social MediaManager.png" alt="Social Media Management Certificate" style="width:100%; max-width:600px;">
-      </div>
-      <div class="project">
-        <h3>Canva Design</h3>
-        <img src="Canva Design.png" alt="Canva Design Certificate" style="width:100%; max-width:600px;">
-      </div>
+      <div class="project"><h3>Web Design</h3><img src="Web design.png" alt="Web Design Certificate"></div>
+      <div class="project"><h3>Video Editing</h3><img src="Video Editing.png" alt="Video Editing Certificate"></div>
+      <div class="project"><h3>Facebook Ads</h3><img src="Facebook Ads.png" alt="Facebook Ads Certificate"></div>
+      <div class="project"><h3>Social Media Marketing</h3><img src="Social MediaManager.png" alt="Social Media Management Certificate"></div>
+      <div class="project"><h3>Canva Design</h3><img src="Canva Design.png" alt="Canva Design Certificate"></div>
     </div>
   </section>
 
   <section>
     <h2>Work With Me</h2>
-    <p>Looking to boost your business with quality content, digital presence or visuals? I'm ready to work with you remotely. Let's bring your ideas to life!</p>
-    <a href="https://docs.google.com/document/d/18sJq_B3qlFqr36mzhfDijpbV2rWgupCG?rtpof=true&usp=drive_fs" target="_blank">Download My Resume</a>
+    <p>Looking to boost your business with quality content or a strong digital presence? Let’s bring your ideas to life!</p>
+    <p><a href="https://docs.google.com/document/d/18sJq_B3qlFqr36mzhfDijpbV2rWgupCG?rtpof=true&usp=drive_fs" target="_blank">Download My Resume</a></p>
   </section>
 
   <section>
     <h2>Connect with Me</h2>
     <div class="button-container">
       <a href="https://web.facebook.com/profile.php?id=100081657203590" target="_blank" class="oval-button facebook">Facebook</a>
-      <a href="https://www.instagram.com/johnagbeja?igsh=NWFodGk3d203cGtwE" target="_blank" class="oval-button instagram">Instagram</a>
+      <a href="https://www.instagram.com/johnagbeja" target="_blank" class="oval-button instagram">Instagram</a>
       <a href="https://wa.me/2348053724254" target="_blank" class="oval-button whatsapp">WhatsApp</a>
       <a href="mailto:agbejajohn47@gmail.com" class="oval-button email">Email</a>
       <a href="tel:+2348053724254" class="oval-button call">Call Me</a>
