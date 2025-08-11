@@ -100,10 +100,9 @@
       background: #f0f4f8;
       padding: 1.5rem;
       border-radius: 10px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      transition: all 0.8s ease;
       opacity: 0;
       transform: translateY(30px);
-      transition: all 0.8s ease;
     }
     .project.show {
       opacity: 1;
@@ -218,6 +217,8 @@
       <div class="project">
         <h3>Ads Manager</h3>
         <p>I create and manage ads for businesses, individuals, and influencers.</p>
+        <img src="ads-sample1.jpg" alt="Ads Sample 1">
+        <img src="ads-sample2.jpg" alt="Ads Sample 2">
       </div>
       <div class="project">
         <h3>Social Media Manager</h3>
@@ -282,11 +283,13 @@
   </footer>
 
   <script>
-    // Float-in effect
+    // Float-in effect that re-triggers every time
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('show');
+        } else {
+          entry.target.classList.remove('show'); // remove when out of view to re-trigger
         }
       });
     }, { threshold: 0.1 });
