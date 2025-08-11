@@ -3,246 +3,295 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>John Agbeja Portfolio</title>
+  <title>John Agbeja | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9fafb;
       color: #333;
+      line-height: 1.6;
     }
-    header, section {
-      padding: 40px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-    h1, h2, h3 {
-      text-align: center;
-    }
-    a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-
-    /* Float-in animation styles */
-    .float-in {
-      opacity: 0;
-      transform: translateX(50px);
-      transition: all 0.8s ease-out;
-    }
-    .float-in.left {
-      transform: translateX(-50px);
-    }
-    .float-in.visible {
-      opacity: 1;
-      transform: translateX(0);
-    }
-
-    /* About Me section */
-    .about-me {
+    /* Header */
+    header {
+      background: linear-gradient(135deg, #2c3e50, #34495e);
+      color: white;
+      padding: 3rem 1rem;
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
+      gap: 2rem;
     }
-    .about-me img {
-      max-width: 300px;
-      border-radius: 12px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    header img {
+      width: 140px;
+      border-radius: 50%;
+      border: 4px solid white;
+      transition: transform 0.3s ease;
     }
-    .about-caption {
-      font-style: italic;
-      color: #555;
+    header img:hover { transform: scale(1.05); }
+    header .hero-text {
       text-align: center;
-      margin-top: 8px;
+      max-width: 500px;
+    }
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+      color: #ffdd00;
+    }
+    header p { font-size: 1rem; opacity: 0.9; }
+
+    /* Sections */
+    section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+    section.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h2 {
+      color: #2c3e50;
+      margin-bottom: 1rem;
+      border-left: 5px solid #2c3e50;
+      padding-left: 1rem;
+      font-size: 1.6rem;
     }
 
-    /* Projects grid */
+    /* About Me with Second Picture */
+    .about-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      align-items: center;
+    }
+    .about-text { flex: 1; }
+    .about-image {
+      flex: 1;
+      text-align: center;
+    }
+    .about-image img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 12px;
+    }
+    .caption {
+      font-style: italic;
+      color: #555;
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    /* Projects Grid */
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      gap: 1.5rem;
     }
-    .project-card {
-      background: white;
-      padding: 20px;
+    .project {
+      background: #f0f4f8;
+      padding: 1.5rem;
       border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+    .project.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .project:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+    .project img {
+      width: 100%;
+      height: auto;
+      margin-top: 1rem;
+      border-radius: 10px;
+    }
+
+    /* Highlight Section */
+    .highlight {
+      background: #ffdd00;
+      color: #2c3e50;
+      border-radius: 10px;
+      padding: 2rem;
       text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    .highlight a {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 12px 25px;
+      border-radius: 999px;
+      background: #2c3e50;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
     }
-    .project-card img {
-      max-width: 100%;
-      border-radius: 6px;
-      margin-bottom: 10px;
+    .highlight a:hover { background: #1a242f; }
+
+    /* Buttons */
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 1.5rem;
     }
+    .oval-button {
+      padding: 12px 28px;
+      font-size: 16px;
+      border-radius: 999px;
+      color: #fff;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+    .facebook { background: #1877f2; }
+    .facebook:hover { background: #145dbf; }
+    .instagram { background: #e1306c; }
+    .instagram:hover { background: #c13584; }
+    .whatsapp, .call { background: #25d366; }
+    .whatsapp:hover, .call:hover { background: #128c7e; }
+    .email { background: #d44638; }
+    .email:hover { background: #a5352d; }
 
     /* Footer */
     footer {
-      background: #222;
-      color: #fff;
-      padding: 30px 20px;
       text-align: center;
+      padding: 1.5rem 1rem;
+      color: #888;
+      font-size: 0.9rem;
     }
-    footer a {
-      color: #ffcc00;
+
+    @media (max-width: 768px) {
+      header { flex-direction: column; text-align: center; }
+      header h1 { font-size: 1.8rem; }
+      .about-container { flex-direction: column; text-align: center; }
+      .oval-button { width: 100%; text-align: center; }
+      section { padding: 1.5rem 1rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="float-in left">
-    <h1>John Agbeja Portfolio</h1>
-    <p>Content Creator | Digital Skills Coach | Entrepreneur</p>
+  <header>
+    <img src="profile32.jpg" alt="John Agbeja">
+    <div class="hero-text">
+      <h1>John Agbeja Portfolio</h1>
+      <p>Content Creator | Digital Skills Coach | Entrepreneur</p>
+    </div>
   </header>
 
-  <!-- About Me -->
-  <section class="about-me float-in right">
-    <div>
+  <section class="about-container">
+    <div class="about-text">
       <h2>About Me</h2>
       <p>Hello! I'm John Agbeja, a visionary leader committed to making a difference. I’m a passionate content creator and digital entrepreneur who helps people grow through personal development content and offers services in branding, video editing, graphics design, ads management, and more.</p>
     </div>
-    <div>
-      <img src="profile.jpg" alt="Profile Image">
-    </div>
-    <div>
-      <img src="profile33.jpg" alt="Second Profile Image">
-      <p class="about-caption">Every project is a story — I bring ideas to life with creativity, strategy, and precision.</p>
+    <div class="about-image">
+      <img src="profile33.jpg" alt="John Agbeja">
+      <div class="caption">“Empowering growth, one idea at a time – helping individuals and businesses turn vision into reality.”</div>
     </div>
   </section>
 
-  <!-- Video Editing & Graphics Design -->
-  <section class="float-in left">
-    <h2>Video Editing & Graphics</h2>
-    <p style="text-align:center;">I create seamless and engaging videos and graphics for businesses and influencers.</p>
-    <div class="projects">
-      <div class="project-card">
-        <img src="video-sample1.jpg" alt="Video Project 1">
-        <p>Sample Video Editing Project 1</p>
-      </div>
-      <div class="project-card">
-        <img src="video-sample2.jpg" alt="Video Project 2">
-        <p>Sample Video Editing Project 2</p>
-      </div>
-    </div>
-    <h3>Alone but Not Lonely (Book Cover Design)</h3>
-    <p style="text-align:center;">I designed the cover of this upcoming book focused on self-discovery through solitude.</p>
-  </section>
-
-  <!-- Ads Manager -->
-  <section class="float-in right">
-    <h2>Ads Manager</h2>
-    <p style="text-align:center;">I create and manage ads for businesses, individuals, and influencers.</p>
-    <div class="projects">
-      <div class="project-card">
-        <img src="ads-sample1.jpg" alt="Ads Project 1">
-        <p>Sample Ads Campaign 1</p>
-      </div>
-      <div class="project-card">
-        <img src="ads-sample2.jpg" alt="Ads Project 2">
-        <p>Sample Ads Campaign 2</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Social Media Manager -->
-  <section class="float-in left">
-    <h2>Social Media Manager</h2>
-    <p style="text-align:center;">I manage Full Redemption Chapel, Gbogbo's social media. This includes their events, branding and web presence.</p>
-    <p style="text-align:center;"><a href="#">Visit the FRChapel Website</a></p>
-  </section>
-
-  <!-- Basic Digital Solutions -->
-  <section class="float-in right">
-    <h2>Basic Digital Solutions</h2>
-    <p>I help individuals and small businesses solve basic digital problems with fast, practical solutions.</p>
-    <ul>
-      <li>Creating & managing social media accounts</li>
-      <li>Setting up professional emails</li>
-      <li>Linking domains</li>
-      <li>Website setup</li>
-      <li>Portfolio website creation</li>
-      <li>Tech troubleshooting</li>
-      <li>Guidance on tools like Zoom, Canva, Google Drive, etc.</li>
-    </ul>
-  </section>
-
-  <!-- Projects & Services -->
-  <section class="float-in left">
+  <section>
     <h2>Projects & Services</h2>
     <div class="projects">
-      <div class="project-card">
-        <img src="project1.jpg" alt="Other Project">
-        <p>Other Project</p>
+      <div class="project">
+        <h3>Video Editing & Graphics</h3>
+        <p>I create seamless and engaging videos and graphics for businesses and influencers.</p>
       </div>
-      <!-- Beanova moved to last -->
-      <div class="project-card">
-        <img src="beanova.jpg" alt="Beanova Project">
-        <p>Beanova: Locust Bean Products - A growing food brand offering natural, healthy locust bean-based products.</p>
+      <div class="project">
+        <h3>Alone but Not Lonely (Book Cover Design)</h3>
+        <p>I designed the cover of this upcoming book focused on self-discovery through solitude.</p>
+        <img src="AloneCover1.jpg" alt="Alone but Not Lonely Cover">
+      </div>
+      <div class="project">
+        <h3>Ads Manager</h3>
+        <p>I create and manage ads for businesses, individuals, and influencers.</p>
+      </div>
+      <div class="project">
+        <h3>Social Media Manager</h3>
+        <p>I manage <strong>Full Redemption Chapel, Gbogbo</strong>'s social media. This includes their events, branding and web presence.</p>
+        <img src="frc-flyer1.jpg" alt="FRC Flyer 1">
+        <img src="frc-flyer2.jpg" alt="FRC Flyer 2">
+        <p><a href="https://faith-arena.github.io/FRChapel-Gbogbo/" target="_blank">Visit the FRChapel Website</a></p>
+      </div>
+      <div class="project">
+        <h3>Basic Digital Solutions</h3>
+        <p>I help individuals and small businesses solve basic digital problems with fast, practical solutions.</p>
+        <ul>
+          <li>Creating & managing social media accounts</li>
+          <li>Setting up professional emails</li>
+          <li>Linking domains</li>
+          <li>Website setup</li>
+          <li>Portfolio website creation</li>
+          <li>Tech troubleshooting</li>
+          <li>Guidance on tools like Zoom, Canva, Google Drive, etc.</li>
+        </ul>
+      </div>
+      <div class="project">
+        <h3>Beanova: Locust Bean Products</h3>
+        <p>A growing food brand offering natural, healthy locust bean-based products.</p>
+        <img src="Beanova1.jpg" alt="Single Locust Bean">
+        <img src="beanova-products.jpg" alt="Collection of Products">
       </div>
     </div>
   </section>
 
-  <!-- Certificates -->
-  <section class="float-in right">
+  <section>
     <h2>Certificate of Skills</h2>
-    <ul>
-      <li>Web Design</li>
-      <li>Video Editing</li>
-      <li>Facebook Ads</li>
-      <li>Social Media Marketing</li>
-      <li>Canva Design</li>
-    </ul>
+    <div class="projects">
+      <div class="project"><h3>Web Design</h3><img src="Web design.png" alt="Web Design Certificate"></div>
+      <div class="project"><h3>Video Editing</h3><img src="Video Editing.png" alt="Video Editing Certificate"></div>
+      <div class="project"><h3>Facebook Ads</h3><img src="Facebook Ads.png" alt="Facebook Ads Certificate"></div>
+      <div class="project"><h3>Social Media Marketing</h3><img src="Social MediaManager.png" alt="Social Media Management Certificate"></div>
+      <div class="project"><h3>Canva Design</h3><img src="Canva Design.png" alt="Canva Design Certificate"></div>
+    </div>
   </section>
 
-  <!-- Work With Me -->
-  <section class="float-in left">
+  <section class="highlight">
     <h2>Work With Me</h2>
-    <p style="text-align:center;">Looking to boost your business with quality content or a strong digital presence? Let’s bring your ideas to life!</p>
-    <p style="text-align:center;"><a href="#">Hire Me on WhatsApp</a> | <a href="#">Download My Resume</a></p>
+    <p>Looking to boost your business with quality content or a strong digital presence? Let’s bring your ideas to life!</p>
+    <a href="https://wa.me/2348053724254" target="_blank">Hire Me on WhatsApp</a>
+    <p style="margin-top:10px;"><a href="https://docs.google.com/document/d/18sJq_B3qlFqr36mzhfDijpbV2rWgupCG?rtpof=true&usp=drive_fs" target="_blank">Download My Resume</a></p>
   </section>
 
-  <!-- Connect with Me -->
-  <footer>
+  <section>
     <h2>Connect with Me</h2>
-    <p>
-      <a href="#">Facebook</a> |
-      <a href="#">Instagram</a> |
-      <a href="#">WhatsApp</a> |
-      <a href="mailto:your@email.com">Email</a> |
-      <a href="tel:+1234567890">Call Me</a>
-    </p>
-    <p>© 2025 John Agbeja. All rights reserved.</p>
+    <div class="button-container">
+      <a href="https://web.facebook.com/profile.php?id=100081657203590" target="_blank" class="oval-button facebook">Facebook</a>
+      <a href="https://www.instagram.com/johnagbeja" target="_blank" class="oval-button instagram">Instagram</a>
+      <a href="https://wa.me/2348053724254" target="_blank" class="oval-button whatsapp">WhatsApp</a>
+      <a href="mailto:agbejajohn47@gmail.com" class="oval-button email">Email</a>
+      <a href="tel:+2348053724254" class="oval-button call">Call Me</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 John Agbeja. All rights reserved.
   </footer>
 
-  <!-- Scroll-triggered animation script -->
   <script>
-    const observer = new IntersectionObserver(entries => {
+    // Float-in effect
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        } else {
-          entry.target.classList.remove('visible');
+          entry.target.classList.add('show');
         }
       });
-    }, { threshold: 0.2 });
+    }, { threshold: 0.1 });
 
-    document.querySelectorAll('.float-in').forEach((el, index) => {
-      if (index % 2 === 0) el.classList.add('left');
-      else el.classList.add('right');
-      observer.observe(el);
-    });
+    document.querySelectorAll('section, .project').forEach(el => observer.observe(el));
   </script>
-
 </body>
 </html>
